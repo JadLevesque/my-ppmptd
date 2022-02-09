@@ -1,3 +1,4 @@
 - Add code examples
 - Support Linux
 - Clean up the code
+- Find a way to produce a file based parser for __TIME__
