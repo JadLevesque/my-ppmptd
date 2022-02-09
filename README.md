@@ -8,8 +8,10 @@ For what purpose? Preprocessor metaprogramming using time and date.
 
 Isn't this really impractical? Yes. But imagine the confusion on the face of someone reading `#include __DATE__` somewhere in your code.
 
+Why release this library? Because I've been sitting on it since 2017 and no one seems to have come up with something similar since then.
+
 ## How to use the my-ppmptd
-Do note you have to generate the library yourself. The number of files poduced by this generator is... large.
+Do note you have to generate the library yourself. The number of files poduced by this generator is... large. The files number around 3.7 million. Most of it is 3.6M 1 kB files for the `__DATE__` file name based parser.
 
 Call syntax:
   ```
@@ -25,9 +27,9 @@ Call syntax:
   
 Assertion based parsers use gcc's `#assert` directive to produce predicates to match on string literals. This is the slowest of the two parser as the preprocessor can be slow at interpretting those.
 
-File based parsers (ab)use the file system with the deceptively simple `#include __DATE__` as only requirement to call. This parser is as fast as the slowest part of the files system/storage hardware. Qualitative test have been run on an SSD, and it is quite fast. Compilation of trivial programs calling upon the file based `__DATE__` parser complete under a second. 
+File name based parsers (ab)use the file system with the deceptively simple `#include __DATE__` as only requirement to call. This parser is as fast as the slowest part of the files system/storage hardware. Qualitative tests have been run on an SSD, and it is quite fast. Compilation of trivial programs calling upon the file name based `__DATE__` parser complete under a second. 
 
-__Important note__: If the `__DATE__` file based parser is used, an include path must be added to its directory. Using the `-idirafter` option is recommended.
+__Important note__: If the `__DATE__` file name based parser is used, an include path must be added to its directory. Using the `-idirafter` option is recommended.
 
 ### Macros defined by the parsers
 - `MY_PPMPTD_TIME_SECONDS`
