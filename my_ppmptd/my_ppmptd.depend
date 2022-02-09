@@ -1,0 +1,66 @@
+# depslib dependency file v1.0
+1644078513 source:c:\users\leves\programmation\metaprogrammation\my_ppmptd\common.c
+	<windows.h>
+	<stdio.h>
+	<stdlib.h>
+	"common.h"
+
+1644375522 c:\users\leves\programmation\metaprogrammation\my_ppmptd\common.h
+	<stdbool.h>
+
+1644393115 source:c:\users\leves\programmation\metaprogrammation\my_ppmptd\gen_date.c
+	<windows.h>
+	<stdio.h>
+	"gen_date.h"
+	"common.h"
+	"gen_pp.h"
+	<my_ppmptd/date/0/0/0/0.h>
+	<my_ppmptd/date/0/0/0/1.h>
+
+1644390849 c:\users\leves\programmation\metaprogrammation\my_ppmptd\gen_date.h
+	<time.h>
+
+1643921929 c:\users\leves\programmation\metaprogrammation\my_ppmptd\gen_pp.h
+	<stdbool.h>
+	<stdio.h>
+
+1644015464 source:c:\users\leves\programmation\metaprogrammation\my_ppmptd\gen_pp.c
+	"gen_pp.h"
+	"common.h"
+	<windows.h>
+
+1644359286 source:c:\users\leves\programmation\metaprogrammation\my_ppmptd\gen_time.c
+	<stdio.h>
+	<windows.h>
+	"gen_pp.h"
+	"gen_time.h"
+	"common.h"
+	"./my_ppmptd/time/0/0.h"
+	"./my_ppmptd/time/0/1.h"
+	"./my_ppmptd/time/23/59.h"
+
+1643921931 c:\users\leves\programmation\metaprogrammation\my_ppmptd\gen_time.h
+	<stdlib.h>
+
+1644392835 source:c:\users\leves\programmation\metaprogrammation\my_ppmptd\main.c
+	<windows.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+	<time.h>
+	"common.h"
+	"gen_pp.h"
+	"gen_time.h"
+	"gen_date.h"
+	"lib.h"
+
+1644016817 source:c:\users\leves\programmation\metaprogrammation\my_ppmptd\lib.c
+	<windows.h>
+	<stdio.h>
+	"lib.h"
+	"common.h"
+
+1644016755 c:\users\leves\programmation\metaprogrammation\my_ppmptd\lib.h
+	<stdlib.h>
+
