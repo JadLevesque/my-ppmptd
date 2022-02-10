@@ -11,7 +11,24 @@ Isn't this really impractical? Yes. But imagine the confusion on the face of som
 Why release this library? Because I've been sitting on it since 2017 and no one seems to have come up with something similar since then.
 
 ## How to use the my-ppmptd
-Do note you have to generate the library yourself. The number of files poduced by this generator is... large. The files number around 3.7 million. Most of it is 3.6M 1 kB files for the `__DATE__` file name based parser.
+Compressed variants of the library are available. This should help users use the library between now and when Linux becomes supported by the generator. Otherwise, the code generator is currently supported on Windows (see OS compatibility list). 
+
+It is recommended that mechanical storage devices (HDD) users use the `assert` variant/mode as it offloads the processing to the preprocessor. Solid state drive (SSD) users can use the `3_6M_files` varianta as it offloads processessing to the file system, though at the cost of storage space.
+
+### For compressed library download
+1. Uncompress the library
+2. Uncompress `date.h` and `time.h`
+3. Delete the compressed versions of `date.h` and `time.h`
+4. Have the library in a search directory
+5. If using the `3_6M_files` variant, have `ppmptd/date/` **as** an extra search directory
+
+### For code generator use
+1. Generate the code (see call syntax)
+2. Have the library in a search directory
+
+**Note:** 
+- HDD performance have not been tested
+- On `3_6M_files` mode with an SSD, code generation can take from one hour to quite a bit more than one hour. HDD users ought to take the day off
 
 Call syntax:
   ```
@@ -25,11 +42,13 @@ Call syntax:
     `<lib-path>` is the path to the directory you wish to generate the files into.
     `<mode>` is the parser for `__DATE__`. Due to techincal limitations, there is currently no parser choice of `__TIME__`. 
   
-Assertion based parsers use gcc's `#assert` directive to produce predicates to match on string literals. This is the slowest of the two parser as the preprocessor can be slow at interpretting those.
+Assertion parsers use gcc's `#assert` directive to produce predicates to match on string literals. This is the slowest of the two parser as the preprocessor can be slow at interpretting those.
 
-File name based parsers (ab)use the file system with the deceptively simple `#include __DATE__` as only requirement to call. This parser is as fast as the slowest part of the files system/storage hardware. Qualitative tests have been run on an SSD, and it is quite fast. Compilation of trivial programs calling upon the file name based `__DATE__` parser complete under a second. 
+File name parsers (ab)use the file system with the deceptively simple `#include __DATE__` as only requirement to call. This parser is as fast as the slowest part of the files system/storage hardware. Qualitative tests have been run on an SSD, and it is quite fast. Compilation of trivial programs calling upon the file name `__DATE__` parser complete under a second. 
 
-__Important note__: If the `__DATE__` file name based parser is used, an include path must be added to its directory. Using the `-idirafter` option is recommended.
+**Important notes:**
+- If the `__DATE__` file name parser is used, an include path must be added to its directory. Using the `-idirafter` option is recommended.
+- In `3_6M_files` mode, the generator will produces a `__DATE__` parser of 3.6 million files in a single directory. This is done to reduce the number of search directories. The creation of such files can be interrupted with `Ctrl`+`C`.
 
 ### Macros defined by the parsers
 - `MY_PPMPTD_TIME_SECONDS`
