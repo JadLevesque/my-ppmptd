@@ -13,7 +13,7 @@ Why release this library? Because I've been sitting on it since 2017 and no one 
 ## How to use the my-ppmptd
 Compressed variants of the library are available. This should help users use the library between now and when Linux becomes supported by the generator. Otherwise, the code generator is currently supported on Windows (see OS compatibility list). 
 
-It is recommended that mechanical storage devices (HDD) users use the `assert` variant/mode as it offloads the processing to the preprocessor. Solid state drive (SSD) users can use the `3_6M_files` varianta as it offloads processessing to the file system, though at the cost of storage space.
+It is recommended that mechanical storage devices (HDD) users use the `assert` variant/mode as it offloads the processing to the preprocessor. Solid state drive (SSD) users can use the `3_6M_files` variant, as it offloads processessing to the file system, though at the cost of storage space.
 
 ### For compressed library download
 1. Uncompress the library
