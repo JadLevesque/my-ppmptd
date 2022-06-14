@@ -17,10 +17,8 @@ It is recommended that mechanical storage devices (HDD) users use the `assert` v
 
 ### For compressed library download
 1. Uncompress the library
-2. Uncompress `date.h` and `time.h`
-3. Delete the compressed versions of `date.h` and `time.h`
-4. Have the library in a search directory
-5. If using the `3_6M_files` variant, have `ppmptd/date/` **as** an extra search directory
+2. Uncompress `date.h` and `time.h` in a search directory
+3. If using the `3_6M_files` variant, have `my_ppmptd/date/` **as** an extra search directory
 
 ### For code generator use
 1. Generate the code (see call syntax)
