@@ -55,6 +55,8 @@ File name parsers (ab)use the file system with the deceptively simple `#include 
 - `MY_PPMPTD_DATE_MONTH`
 - `MY_PPMPTD_DATE_YEAR`
 
+Note: `MY_PPMPTD_DATE_YEAR` is in the Chaos-pp Nat format.
+
 OS compatibility list:
 - Windows 10 (other versions TBD)
 
