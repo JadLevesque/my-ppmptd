@@ -2,7 +2,7 @@
 Compile-time parsing of `__TIME__` and `__DATE__` macros into numerical tokens.
 
 ## Why my-ppmptd
-Why did I create my preprocessor metaprogramming `__TIME__` and `__DATE__` library? To parse `__TIME__` and `__DATE__` to obtain the temporal information they contain during preprocessing.
+Why did I create my preprocessor metaprogramming `__TIME__` and `__DATE__` library? To parse `__TIME__` and `__DATE__` to obtain the temporal information they contain at compile-time.
 
 For what purpose? Preprocessor metaprogramming using time and date.
 
