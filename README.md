@@ -21,8 +21,7 @@ It is recommended that mechanical storage devices (HDD) users use the `assert` v
 3. If using the `3_6M_files` variant, have `my_ppmptd/date/` **as** an extra search directory
 
 ### For code generator use
-1. Generate the code (see call syntax)
-2. Have the library in a search directory
+Generate the code (see call syntax) directly in a search directory
 
 **Note:** 
 - HDD performance have not been tested
